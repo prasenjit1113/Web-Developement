@@ -1,0 +1,49 @@
+/* pseudo classes */
+
+/* link ,, visited ,, hover ,, active */
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: black;
+}
+
+/* focus,, required */
+input:focus{
+    padding: 15px;  /*changes its size when clicked*/
+    outline: none;
+    border: 2px solid green;
+}
+input:required{
+    color: red;
+}
+
+/* First child & first of type Pseudo Class */
+/* p:first-child{
+    color: red;
+} */
+/* p:first-of-type{
+    color: red;
+} */
+
+/* Last child & Last of type pseudo class */
+/* p:last-child{
+    color: red;
+} */
+/* p:last-of-type{
+    color: red;
+} */
+
+/* nth child & nth of type pseudo class */
+/* p:nth-child(2){
+    color: green;
+} */
+p:nth-of-type(2){
+    color: green;
+}

@@ -1,0 +1,67 @@
+/* h1{
+    border: 4px dotted red;
+    padding: 20px 40px; */
+    /* padding: 20px;
+    margin: 30px 40px;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgb(116, 116, 225);
+    background-color: rgb(137, 137, 234);
+} */
+
+h1, h2{
+    border: 4px solid black;
+    color: rgb(99, 99, 231);
+    /* width: 500px; */
+    /* height: 100px; */
+
+    /* block elements have margin and padding on all 4 sides */
+    /* margin: 100px;  */
+    /* padding: 100px; */
+
+    /* display: inline;  converting into inline elements */
+}
+
+a{
+    border: 2px solid red;
+    /* width and height doesn't affect on inline elements */
+    /* width: 500px;
+    height: 100px; */
+
+    /* inline elements have margin and padding only left and right */
+    /* margin: 100px; */
+    /* padding: 0px 100px; */
+
+    /* display: block; converting into block elements and now we can add margin and padding on all 4 sides */
+}
+
+
+/* But in image we can use both margin and padding. That's why it is different from other inline elements */
+
+div a{
+    border: 2px solid green;
+    color: red;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+
+/* border box --> adjusts the content within box within specified width*/
+.box1{
+    background-color: aqua;
+    margin: 20px;
+    width: 500px;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+}
+.box2{
+    background-color: brown;
+    margin: 20px;
+    width: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+}

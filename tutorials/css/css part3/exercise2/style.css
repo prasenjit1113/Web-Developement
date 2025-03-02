@@ -1,0 +1,23 @@
+.container{
+    width: 1400px;
+    margin: 0px auto;
+}
+h2{
+    border: 1px solid white;
+    padding: 10px 0px;
+    text-align: center;
+    background: lightgrey;
+}
+
+section.container1, section.container2{
+    border: 1px solid black;
+}
+
+.container1{
+    margin-bottom: 40px;
+    padding-left:5px;
+}
+
+.container2{
+    padding-left:5px;
+}

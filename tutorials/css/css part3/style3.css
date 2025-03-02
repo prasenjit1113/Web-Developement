@@ -1,0 +1,26 @@
+/* :root , :not and :empty Pseudo Classes */
+/* body :not(p){
+    color: red;
+    background-color: yellow;
+} */
+ /* to display the empty div */
+div:empty{
+    background-color: red;
+    border: 1px solid black;
+    height: 80px;
+    width: 80px;
+}
+/* we prefer to use body inplace of root */
+/* :root{
+    color: yellow;
+    background-color: aqua;
+} */
+
+
+/* p::first-letter{
+    font-size: 40px;
+} */
+::selection{
+    background: yellow;
+    color: white;
+}

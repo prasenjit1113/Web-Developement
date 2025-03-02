@@ -1,0 +1,26 @@
+/* descendant */
+header p{
+    color: red;
+}
+header a{
+    color: green;
+}
+header{
+    background-color: rgb(165, 201, 233);
+}
+section.my-articles{
+    background-color: rgb(158, 158, 221);
+}
+
+/* direct child */
+section.my-articles > h2{
+    color: brown;
+}
+/* paragraphs that comes after ul */
+ul+p{
+    color: rgb(192, 34, 192);
+}
+/* (another way) paragraphs that comes after h2 */
+section.my-articles h2+p{
+    color: yellow;
+}

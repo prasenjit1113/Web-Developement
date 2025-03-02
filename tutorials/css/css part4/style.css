@@ -1,0 +1,50 @@
+/* Absolute units */
+/* 1 inch == 96px */
+/* 1px == 0.75pt */
+/* font-size = 12in; */
+
+
+/* Relative units */
+/* %, rem, em */
+
+/* % -->it defines the parent child relationship*/
+/* div{
+    border: 1px solid red;
+    font-size: 20px;
+    width: 100%;
+}
+p{
+    border: 1px soid green;
+    width: 50%;  
+} */
+
+/* rem --> it multiplies the default size ****Preferable to use with font sizes****/
+/* em --> it multiplies with the previous value ****Preferable to use with margin and paddings*** */
+/* html changes default font size */
+html{
+    /* font-size: 10px; */
+    /* many developers uses 62.5% , that is the default browser font size */
+    font-size: 62.5%;
+}
+/* .box1{
+    font-size: 2rem;
+    border: 2rem solid red;
+    padding: 2em;
+}
+.box2{
+    margin: 2em;
+    border: 3rem solid green;
+} */
+
+
+
+/* Viewport Units -->vh, vw, vmax, vmin */
+/* vh--> takes the entire height */
+/* vw--> takes the entire width */
+/* vmax--> takes maximum between height and width*/
+/* vmin--> takes minimum between height and width*/
+/* .box1{
+    height: 100vh;
+    background-color: violet;
+} */
+
