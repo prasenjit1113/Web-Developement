@@ -21,7 +21,7 @@
 .ram{
     width: 25%;
     /* border: 2px solid green; */
-    background-color: lightgrey;
+    background-color: rgb(240, 214, 125);
     float: left;
     padding: 20px;
 }
