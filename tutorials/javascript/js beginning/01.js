@@ -141,7 +141,7 @@ console.log(drink);
 // }
 
 //switch
-let day = 2;
+let day = 4;
 
 switch(day){
     case 0:
