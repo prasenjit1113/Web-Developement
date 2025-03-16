@@ -1,6 +1,3 @@
-// console.log can print something on console
-console.log("hello world kolkata")
-
 //introduction to variables
 //variables can store some information
 //we can use that information later
@@ -13,7 +10,7 @@ var firstName = "prasenjit"
 console.log(firstName);
 //change value
 firstName = "paul";
-console.log(firstName)
+console.log(firstName);
 
 
 //let keyword
@@ -109,10 +106,10 @@ console.log(typeof nume);
 console.log(num + nume);
 
 //boolean & comparision operator
-let num1 = 6;
-// let num1 = "8";
+// let num1 = 6;
+let num1 = "8";
 let num2 = 8;
-console.log(num1 < num2);
+console.log(num1 === num2)
 
 // == vs ===
 // console.log(num1 == num2);    //checks only value not data type. It does not happen to any other progranming laguage

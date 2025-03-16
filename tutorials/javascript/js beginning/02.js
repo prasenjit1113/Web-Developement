@@ -70,7 +70,7 @@
 // let arr2 = [].concat(arr1, "num4", "num5");
 
 // method 4 --> new way
-// let arr2 = [...arr1]; //here ... is called spread operator
+// let arr2 = [...arr1];          //here ... is called spread operator
 // let arr2 = [...arr1, ...arr3];
 
 // arr1.push("num3");
@@ -93,12 +93,12 @@
 // }
 
 //for in loop
-// const fruits = ["banana", "apple", "mango", "grapes"];
-// const fruits2 = [];
-// for(let fruit of fruits){
-//     fruits2.push(fruit);
-// }
-// console.log(fruits2);
+const fruits = ["banana", "apple", "mango", "grapes"];
+const fruits2 = [];
+for(let fruit of fruits){
+    fruits2.push(fruit);
+}
+console.log(fruits2);
 
 
 //array destructuring --> used to store value of array to different variables in one line
@@ -108,6 +108,7 @@ const arr = ["value1", "value2"];
 // console.log("value of var1 is ", myvar1);
 // console.log("value of var2 is ", myvar2);
 
+//using destructuring
 let [myvar1, myvar2] = arr;
 console.log("value of var1 is ", myvar1);
 console.log("value of var2 is ", myvar2);
