@@ -178,7 +178,7 @@
 // func1(func2);
 
 
-// function returning function
+// function returning another function
 // function myFunc(){
 //     function hello(){
 //         return"hello world";
