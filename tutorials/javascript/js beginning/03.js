@@ -2,7 +2,7 @@
 // arrays are good but not sufficient, so object came
 // objetcs store real world data
 // objects store key value pairs
-// Objects donn't have index
+// Objects don't have index
 
 //how to create objects (key-value pairs)
 //by default keys are strings

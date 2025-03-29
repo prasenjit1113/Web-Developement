@@ -51,7 +51,7 @@
 
 
 //hoisting (only in js) (will be discussed later in detail)
-//before declaration we can call a function 
+//before declaration we can call a function
 // but it does not work for function expression and arrow function
 // singHappy();
 // function singHappy(){
