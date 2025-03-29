@@ -1,16 +1,16 @@
 //Arrays (reference type)
 // it is a ordered collection of items
 
-// let fruits = ["banana", "apple", "mango", "grapes"]
+let fruits = ["banana", "apple", "mango", "grapes"]
 // let numbers = [2,3,5,7.6]
-// console.log(fruits);
+// console.log(typeof fruits);
 // console.log(numbers[2]);
 
 // we can store different types in an array
-// let mixed = ["hello", 3 ,5 , "go", null, undefined]
-// console.log(mixed)
-// console.log(typeof mixed)
-// console.log(Array.isArray(fruits));
+let mixed = ["hello", 3 ,5 , "go", null, undefined]
+console.log(mixed)
+console.log(typeof mixed)
+console.log(Array.isArray(fruits));
 
 
 //***push and pop are faster than shift and unshift****
@@ -93,12 +93,12 @@
 // }
 
 //for in loop
-const fruits = ["banana", "apple", "mango", "grapes"];
-const fruits2 = [];
-for(let fruit of fruits){
-    fruits2.push(fruit);
-}
-console.log(fruits2);
+// const fruits = ["banana", "apple", "mango", "grapes"];
+// const fruits2 = [];
+// for(let fruit of fruits){
+//     fruits2.push(fruit);
+// }
+// console.log(fruits2);
 
 
 //array destructuring --> used to store value of array to different variables in one line
