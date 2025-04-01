@@ -85,7 +85,7 @@
 // },100);
 // console.log(sum);
 
-//how it works, when ,100 not given
+//how it works, when 100 not given
 //accumulator  , currentValue  , return 
 // 1               3               4
 // 4               4               8
@@ -116,9 +116,118 @@
 
 
 //sort method
-// const numbers = [33,11,46,35,67,88,53];
-// numbers.sort();
+//It changes the original array and sorts according to char ascii values
+// '0' : 48
+// '1' : 49
+// '2' : 50
+// '3' : 51
+// '4' : 52
+// '5' : 53
+// '6' : 54
+// '7' : 55
+// '8' : 56
+// '9' : 57
+
+// ':' : 58
+// ';' : 59
+// '<' : 60
+// '=' : 61
+// '>' : 62
+// '?' : 63
+// '@' : 64
+
+// 'A' : 65
+// 'B' : 66
+// 'C' : 67
+// 'D' : 68
+// 'E' : 69
+// 'F' : 70
+// 'G' : 71
+// 'H' : 72
+// 'I' : 73
+// 'J' : 74
+// 'K' : 75
+// 'L' : 76
+// 'M' : 77
+// 'N' : 78
+// 'O' : 79
+// 'P' : 80
+// 'Q' : 81
+// 'R' : 82
+// 'S' : 83
+// 'T' : 84
+// 'U' : 85
+// 'V' : 86
+// 'W' : 87
+// 'X' : 88
+// 'Y' : 89
+// 'Z' : 90
+
+// '[' : 91
+// '\' : 92
+// ']' : 93
+// '^' : 94
+// '_' : 95
+// '`' : 96
+
+// 'a' : 97
+// 'b' : 98
+// 'c' : 99
+// 'd' : 100
+// 'e' : 101
+// 'f' : 102
+// 'g' : 103
+// 'h' : 104
+// 'i' : 105
+// 'j' : 106
+// 'k' : 107
+// 'l' : 108
+// 'm' : 109
+// 'n' : 110
+// 'o' : 111
+// 'p' : 112
+// 'q' : 113
+// 'r' : 114
+// 's' : 115
+// 't' : 116
+// 'u' : 117
+// 'v' : 118
+// 'w' : 119
+// 'x' : 120
+// 'y' : 121
+// 'z' : 122
+// '{' : 123
+// '|' : 124
+// '}' : 125
+
+//example 1
+// const numbers = [323,11636,46,3975,67,8,53];
+// //ascending sort
+// numbers.sort((num1,num2) => num1-num2);
+// //descending sort
+// // numbers.sort((num1,num2) => num2-num1);
 // console.log(numbers);
+
+//how it works
+// a-b ---> postive (greater than 0) ---> prints b, a
+// a-b ---> negative (less than 0) ----> prints a, b
+
+//example 2
+// const userNames = ['harshit', 'abcd', 'mohit', 'nitish', 'aabc', 'ABC', 'Harshit'];
+// userNames.sort();
+// console.log(userNames);
+
+//example 3
+// const products = [
+//     {productId: 1, productName: "p1", price: 300},
+//     {productId: 2, productName: "p2", price: 700},
+//     {productId: 3, productName: "p3", price: 334},
+//     {productId: 4, productName: "p4", price: 143},
+//     {productId: 5, productName: "p5", price: 267},
+// ]
+// const lowToHigh = products.sort((num1,num2) => num1.price-num2.price);
+// console.log(lowToHigh);
+
 
 
 
@@ -182,7 +291,7 @@
 // fill method 
 // it fills the array with any value
 // const numbers = [2,3,23,1,8,7,5];
-// numbers.fill(-3,2,5);  //value to be filled in,starting idx,ending idx-1
+// numbers.fill(-3,2,5);  //(value to be filled in,starting idx,ending idx-1)
 // console.log(numbers);
 
 
