@@ -1,7 +1,7 @@
 //iterables
 //on which we can use for of loop
 
-//******strings , array are iterable*******
+//****** strings, arrays are iterable*******
 // const name = "PrasenJit";
 // const name = ["PrasenJit","Akash","sumit","chiku","ankit"];
 // for(let c of name){
@@ -18,10 +18,7 @@
 //     console.log(obj);
 // }
 
-
-
-
-//**array like objects
+//**** array like objects
 //those who have length property and can be accessed by index , are called array like objects
 //example -> string
 // const str = "hello";
@@ -44,7 +41,7 @@
 
 //method 2
 // const numbers = new Set();
-// const items = ["it1","it2","it3"];
+// const items = ["it1","it2","it3","it4"];
 // numbers.add(5);
 // numbers.add(7);
 // numbers.add(4);
@@ -80,7 +77,7 @@
 //maps
 // it store data in ordered fashion
 //stores key value pairs like objects
-// map is an iterable
+// unlike objects, map is an iterable
 // duplicate keys are not allowed like objects
 
 // ************different between maps and objects**********
@@ -166,10 +163,10 @@
 
 
 //optional chaining
-//when any feature/data is not declared yet but in future the feature will be introduced, in this case we don't want out code to give error so we use ? , that gives undefined message inspite of error if required data is not present
-const user = {
-    firstName: "Prasen",
-    // address: {kolkata: "2234"},
-}
-console.log(user?.firstName);
-console.log(user?.address?.kolkata);
+//when any feature/data is not declared yet but in future the feature will be introduced, in this case we don't want our code to give error so we use ? , that gives undefined message inspite of error if required data is not present
+// const user = {
+//     firstName: "Prasen",
+//     // address: {kolkata: "2234"},
+// }
+// console.log(user?.firstName);
+// console.log(user?.address?.kolkata);
