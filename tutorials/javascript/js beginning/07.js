@@ -36,8 +36,8 @@
 // person3.about();   //here this object refers to person3 object
 
 
-//window object
-// console.log(this);  //javascript's own object
+//window object   //javascript's own object
+// console.log(this);  
 //or
 // console.log(window); 
 
@@ -76,17 +76,17 @@
 
 
 //we can also declare the about function outside with parameters
-function about(address, phone){
-    console.log(this.firstName,this.age,address,phone);
-}
-const user1 = {
-    firstName: "prasenjit",
-    age: 8,
-}
-const user2 = {
-    firstName: "barsha",
-    age: 7,
-}
+// function about(address, phone){
+//     console.log(this.firstName,this.age,address,phone);
+// }
+// const user1 = {
+//     firstName: "prasenjit",
+//     age: 8,
+// }
+// const user2 = {
+//     firstName: "barsha",
+//     age: 7,
+// }
 
 //using call method, passing parameters individual
 // about.call(user1,"kolkata",9626473);
@@ -97,7 +97,380 @@ const user2 = {
 // about.apply(user2,["kolkata",9626473]);
 
 //bind method returns value into a function and then the function is called
-const func1 = about.bind(user1, "kolkata", 76234);
-const func2 = about.bind(user2, "kolkata", 76234);
-func1();
-func2();
+// const func1 = about.bind(user1, "kolkata", 76234);
+// const func2 = about.bind(user2, "kolkata", 76234);
+// func1();
+// func2();
+
+
+//mistake to avoid
+// const user1 = {
+//     firstName: "prasenjit",
+//     age: 8,
+//     about: function(){
+//         console.log(this.firstName,this.age);
+//     }
+// }
+// user1.about();
+
+//if we store the about method into another function like that ..it will give undefined
+//as myfunc has only the about method but not the object user1
+// const myFunc = user1.about;
+
+//so we have to bind it with object user1
+// const myFunc = user1.about.bind(user1);
+// myFunc();
+
+
+
+
+
+//this inside arrow function
+//arrow function does not contain this. It takes this from its sarroundings
+//in this case this is the window object. not user1 object
+// const user1 = {
+//     firstName: "prasenjit",
+//     age: 8,
+//     about: () => {
+//         console.log(this.firstName,this.age);
+//     }
+// }
+// user1.about(); //undefined beacuse in arrow function this refers to window object , not user1
+
+
+
+// Short syntax for methods
+//we can directly make about as a function
+// const user1 = {
+//     firstName: "prasenjit",
+//     age: 8,
+//     about(){
+//         console.log(this.firstName,this.age);
+//     }
+// }
+// user1.about();
+
+
+
+
+
+
+
+
+// function creating object
+// function allUser(firstName, lastname, email, age, address){
+//     const user = {};
+//     user.firstName = firstName;
+//     user.lastname = lastname;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     user.about = function(){
+//         return `${this.firstName} is ${user.age} years old`;
+//     }
+//     user.is18 = function(){
+//         return this.age >= 18;
+//     }
+//     return user;
+// }
+
+// const user1 = allUser("prasenjit","paul","22ehhwiu@gmailcm",24,"kolkata");
+// const user2 = allUser("ram","roy","33jdhu@gmailcm",14,"hydrabad");
+// const user3 = allUser("shaym","singh","44jhsdbu@gmailcm",18,"pune");
+// // console.log(user1);
+// console.log(user1.firstName);
+// console.log(user1.address);
+// console.log(user1.email);
+// const details = user1.about();
+// console.log(details);
+// const age = user1.is18();
+// console.log(age);
+
+//problem 1
+//here the main problem is --> we are creating multiple users and each user calls about and is18 function and each time memory is allocated for these two function
+//that consumes many memory spaces
+
+//solution 1
+//to solve this, we are separating about and is18 function into and object
+//in this case multuple users call the same object through reference and saves memor space
+// const userMethods = {
+//     about: function(){
+//         return `${this.firstName} is ${this.age} years old`;
+//     },
+//     is18: function(){
+//         return this.age >= 18;
+//     }
+// }
+// function allUser(firstName, lastname, email, age, address){
+//     const user = {};
+//     user.firstName = firstName;
+//     user.lastname = lastname;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     user.about = userMethods.about;   //passing the reference of method
+//     user.is18 = userMethods.is18;    //passing the reference of method
+//     return user;
+// }
+
+// const user1 = allUser("prasenjit","paul","22ehhwiu@gmailcm",24,"kolkata");
+// const user2 = allUser("ram","roy","33jdhu@gmailcm",14,"hydrabad");
+// const user3 = allUser("shaym","singh","44jhsdbu@gmailcm",18,"pune");
+// // console.log(user1.firstName);
+// console.log(user1.about());
+// console.log(user1.is18());
+// console.log(user2.about());
+// console.log(user2.is18());
+// console.log(user3.about());
+// console.log(user3.is18());
+
+// here another problem arises --> see in problem of solution 1 section
+
+
+
+
+//Three ways to creating objects
+// way 1  //adding key value pairs inside object
+// const obj1 = {
+//     key1: "value1",
+//     key2: "value2",
+// }
+
+// way 2  //adding key value pairs after creating an empty object
+// const obj1 = {};
+// obj1.key1 = "value1";
+// obj1.key2 = "value2";
+
+// way 3  //creating empty object with reference to another object
+// const obj1 = {};
+// obj1.key1 = "value1";
+// obj1.key2 = "value2";
+// const obj2 = Object.create(obj1);  //empty reference object obj2
+// obj2.key3 = "value3";
+ 
+
+
+// const obj1 = {
+//     key1: "value1",
+//     key2: "value2",
+// }
+// const obj2 = {
+//     key3: "value3",
+// }
+// console.log(obj1);
+// console.log(obj2);
+// console.log(obj1.key2);
+// console.log(obj1.key3);  //undefined as obj1 can't access obj2 key
+// console.log(obj2.key3);
+// console.log(obj2.key1);  //undefined as obj2 can't access obj1 key
+
+//problem 2
+//now the problem is if we want to access key value of obj1 by obj2 it giving undefined 
+//solution 2
+//but we can solve this by creating obj2 object referencing to obj1 object
+
+// ********************  __proto__ or [[prototype]]  *******************
+
+// const obj1 = {
+//     key1: "value1",
+//     key2: "value2",
+// }
+// const obj2 = Object.create(obj1);  //creating object using __proto__ chain
+// obj2.key3 = "value3";
+// console.log(obj1);
+// console.log(obj2);
+// console.log(obj1.key2);  
+// console.log(obj2.key3);
+// // obj2.key1 = "unique";    //at first obj2 checks if it contains key1 or not. If it contain key1 the calls it . if not then it calls obj1's key1
+// console.log(obj2.key1);   
+
+// //****** while creating obj object, then the obj2 object holds the __proto__ / [[prototype]] of obj1 object****
+// //__proto__ or [[prototype]] are same 
+// // but prototype is different thing
+// console.log(obj2.__proto__);
+
+
+
+
+// another problem of solution 1
+//here another problem is --> in allUser function we have to mension each method to be called , by passing the reference of method
+//we can minimize it by creating the object user using __proto__ chaining
+// const userMethods = {
+//     about: function(){
+//         return `${this.firstName} is ${this.age} years old`;
+//     },
+//     is18: function(){
+//         return this.age >= 18;
+//     }
+// }
+// function allUser(firstName, lastname, email, age, address){
+//     const user = Object.create(userMethods);    //creating object using __proto__ chaining
+//     user.firstName = firstName;
+//     user.lastname = lastname;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     return user;
+// }
+
+// const user1 = allUser("prasenjit","paul","22ehhwiu@gmailcm",24,"kolkata");
+// const user2 = allUser("ram","roy","33jdhu@gmailcm",14,"hydrabad");
+// const user3 = allUser("shaym","singh","44jhsdbu@gmailcm",18,"pune");
+// // console.log(user1.firstName);
+// console.log(user1.about());
+// console.log(user1.is18());
+// console.log(user2.about());
+// console.log(user2.is18());
+// console.log(user3.about());
+// console.log(user3.is18());
+
+
+
+
+
+
+
+// ******************* prototype *****************
+
+// in javascript , function ====> function + object
+// we can a function like an object
+// function hello(){
+//     console.log("hello world");
+// }
+// console.log(hello.name);  //name property tells name of the function
+
+//we can add our own properties
+// hello.myProperty = "I am a fresher";
+// console.log(hello.myProperty);
+
+//while craeting an function we get some free space which is object {}
+// ***** prototype is an object which is automatically created when function is created
+// console.log(hello.prototype);   //{}
+
+//only functions provide prototype property. 
+// if(hello.prototype){
+//     console.log("prototype is present");
+// }else{
+//     console.log("prototype is not present");
+// }
+
+//we can add multiple properties(key value pairs) of function by using prototype object
+// hello.prototype.name = "prasenjit";
+// hello.prototype.age = 23;
+// hello.prototype.sing= () => {
+//     return console.log("lalala");
+// }
+// console.log(hello.prototype);
+// console.log(hello.prototype.sing());
+
+
+//so we have seen function by default gives us a prototype object.
+//so we don't need to externally create any other object like userMethods
+// const userMethods = {
+//     about: function(){
+//         return `${this.firstName} is ${this.age} years old`;
+//     },
+//     is18: function(){
+//         return this.age >= 18;
+//     }
+// }
+
+
+// function allUser(firstName, lastname, email, age, address){
+//     const user = Object.create(allUser.prototype);    //creating object using __proto__ chaining
+//     user.firstName = firstName;
+//     user.lastname = lastname;
+//     user.email = email;
+//     user.age = age;
+//     user.address = address;
+//     return user;
+// }
+// // console.log(allUser.prototype);
+// allUser.prototype.about = function(){
+//     return `${this.firstName} is ${this.age} years old`;
+// }
+// allUser.prototype.is18 = function(){
+//     return this.age >= 18;
+// }
+// const user1 = allUser("prasenjit","paul","22ehhwiu@gmailcm",24,"kolkata");
+// const user2 = allUser("ram","roy","33jdhu@gmailcm",14,"hydrabad");
+// const user3 = allUser("shaym","singh","44jhsdbu@gmailcm",18,"pune");
+// // console.log(user1);
+// // console.log(user2);
+// console.log(user1.about());
+// console.log(user1.is18());
+// console.log(user2.about());
+// console.log(user2.is18());
+// console.log(user3.about());
+// console.log(user3.is18());
+
+
+
+
+
+
+
+
+//******************** new keyword *********************
+// function createUser(firstName, age){
+//     this.firstName = firstName;
+//     this.age = age;
+// }
+// createUser.prototype.about = function(){
+//     console.log(this.firstName, this.age);
+// }
+// const user1 = new createUser("prasenjit", 23);
+
+//***** new keyword performs 3 tasks here****
+// 1.) automatically creates empty object like--> this = {}
+// 2.) return this (empty object)
+// 3.) automatically links createUser with prototype object
+// it means--> new keyword does --> Object.create(allUser.prototype);
+
+// console.log(user1);
+// //if javascript does not find about() in createUser, then __proto__ automatically takes it to the prototype object
+// user1.about();
+
+// example
+//allUser() function is also called constructor function as it is constructing object
+//here we have linked allUser with prototype obejct using new keyword inspite of Object.create() . but in future how will other developer know that it is linked with new or not.
+//thats why we should start the function name allUser with capital letter. It ensures that we have linked using new keyword
+
+// function AllUser(firstName, lastname, email, age, address){
+//     this.firstName = firstName;
+//     this.lastname = lastname;
+//     this.email = email;
+//     this.age = age;
+//     this.address = address;
+// }
+// AllUser.prototype.about = function(){
+//     return `${this.firstName} is ${this.age} years old`;
+// }
+// AllUser.prototype.is18 = function(){
+//     return this.age >= 18;
+// }
+
+// const user1 = new AllUser("prasenjit","paul","22ehhwiu@gmailcm",24,"kolkata");
+// const user2 = new AllUser("ram","roy","33jdhu@gmailcm",14,"hydrabad");
+// const user3 = new AllUser("shaym","singh","44jhsdbu@gmailcm",18,"pune");
+
+// console.log(user1);
+// console.log(user2);
+// console.log(user1.about());
+// console.log(user1.is18());
+// console.log(user2.about());
+// console.log(user2.is18());
+// console.log(user3.about());
+// console.log(user3.is18());
+
+//only for displaying keys
+// for(let key in user1){
+//     //show all keys including prototype keys
+//     // console.log(key);
+//     //shows only user1 keys
+//     if(user1.hasOwnProperty(key)){
+//         console.log(key);
+//     }
+// }
+
+
