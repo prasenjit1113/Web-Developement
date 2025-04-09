@@ -1,8 +1,4 @@
 //important array methods
-//forEach (not important)
-// map  (**important ..specially in react)
-// filter (not important)
-// reduce (important)
 
 //forEach (not important)
 //example 1

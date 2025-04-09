@@ -1,7 +1,9 @@
+// Basics of Programming in JavaScript
+
 //introduction to variables
 //variables can store some information
 //we can use that information later
-//we can change that information later
+//we can also change that information later
 
 "use strict";
 //declare a variable
@@ -37,6 +39,7 @@ let fname = "     prasenjit        ";
 fname = fname.trim();
 console.log(fname.length);
 console.log(fname.toUpperCase());
+console.log(fname);
 let newstring = fname.slice(1,5);
 console.log(newstring);
 

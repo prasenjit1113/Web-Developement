@@ -1,3 +1,5 @@
+// Functions in JavaScript
+
 //function declaration --> when a function is declared
 // function singHappy(){
 //     console.log("happy birthday");

@@ -1,3 +1,5 @@
+// Objects in JavaScript
+
 // Object reference type
 // arrays are good but not sufficient, so object came
 // objetcs store real world data
@@ -142,14 +144,14 @@
 
 
 //nested destructuring
-const users = [
-    {userId: 1, firstName: "Prasenjit", gender: "male"},
-    {userId: 2, firstName: "Barsha", gender: "female"},
-    {userId: 3, firstName: "Ram", gender: "male"},
-    {userId: 4, firstName: "Sita", gender: "female"},
-]
-//extracting gender from 1st object and firstname from 4th object
-const [{gender:gen}, , ,{firstName: fname}] = users;
-console.log(fname);
-console.log(gen);
+// const users = [
+//     {userId: 1, firstName: "Prasenjit", gender: "male"},
+//     {userId: 2, firstName: "Barsha", gender: "female"},
+//     {userId: 3, firstName: "Ram", gender: "male"},
+//     {userId: 4, firstName: "Sita", gender: "female"},
+// ]
+// //extracting gender from 1st object and firstname from 4th object
+// const [{gender:gen}, , ,{firstName: fname}] = users;
+// console.log(fname);
+// console.log(gen);
 

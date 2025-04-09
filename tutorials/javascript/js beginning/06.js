@@ -1,6 +1,7 @@
+// More useful things 
+
 //iterables
 //on which we can use for of loop
-
 //****** strings, arrays are iterable*******
 // const name = "PrasenJit";
 // const name = ["PrasenJit","Akash","sumit","chiku","ankit"];
@@ -80,11 +81,10 @@
 // unlike objects, map is an iterable
 // duplicate keys are not allowed like objects
 
-// ************different between maps and objects**********
-// objects can only have string or symbol
-// as key 
-// But in maps you can use anything as key
-// like array, number, string 
+// ************difference between maps and objects**********
+// i) objects can only have string or symbol as key 
+//    But in maps you can use anything as key like array, number, string 
+// ii) objects are not iterable but maps are iterable
 
 //in objects 
 // object literal 
