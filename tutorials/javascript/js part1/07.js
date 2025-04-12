@@ -693,7 +693,7 @@
 
 
 
-// static methods and properties
+// ** static methods and properties
 class Person{
     constructor(firstName,lastName,age){
         this.firstName = firstName;
