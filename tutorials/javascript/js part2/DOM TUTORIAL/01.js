@@ -97,7 +97,7 @@
 
 //loops for NodeList
 // simple for loop for NodeList
-// const navItems = document.querySelectorAll("a");  // Node List 
+// const navItems = document.querySelectorAll("a");  // NodeList 
 // for(let i=0; i<navItems.length; i++){
 //     console.log(navItems[i]);
 //     const navItem = navItems[i];
@@ -132,3 +132,102 @@
 // headLine.innerHTML = "<h1>Welcome Prasenjit</h1>";
 // headLine.innerHTML += "<button class=\"btn\"> Learn more </button>"
 // console.log(headLine.innerHTML);
+
+
+
+
+//classList property 
+//shows all the class names
+// const sectionTodo = document.querySelector(".section-todo");
+// console.log(sectionTodo.classList);
+
+//add class property in css file and add the name under format to get expected output
+// sectionTodo.classList.add("bg-dark");
+
+//delete class property 
+// sectionTodo.classList.remove("container");
+// console.log(sectionTodo.classList);
+
+// check if any class exists or not
+// const ans = sectionTodo.classList.contains("container");
+// const ans = sectionTodo.classList.contains("headlines");
+// console.log(ans);
+
+//if there is already bg-dark class property applied, the toggle removes the property
+//if there does not any bg-dark class property applied, the toggle adds the property
+// sectionTodo.classList.toggle("bg-dark");
+
+//add bg-dark property to header
+// const header = document.querySelector(".header");
+// header.classList.add("bg-dark");
+
+
+
+
+
+
+// Add new elements to page using
+//  1. document.createElement()
+//  append , prepend, remove ,before , after
+
+//directly add list item in js
+
+// append and prepend
+//i. create a list item
+// const newTodoItem = document.createElement("li");
+//ii. initialize the item
+// newTodoItem.textContent = "Teach students";
+//iii. select where to add the list item
+// const todoList = document.querySelector(".todo-list");
+//iv. appends the list item
+// todoList.append(newTodoItem);
+//iv. prepends the list item
+// todoList.prepend(newTodoItem);
+
+// remove list item
+// const todo1 = document.querySelector(".todo-list li");
+// todo1.remove();
+
+//before , after
+// const newTodoItem = document.createElement("li");
+// newTodoItem.textContent = "Teach students";
+// const todoList = document.querySelector(".todo-list");
+// // todoList.before(newTodoItem);
+// todoList.after(newTodoItem);
+
+
+// Add new elements to page using
+// 2. some old methods to support poor IE
+// appendChild, insertBefore, replaceChild, removeChild
+
+// const newTodoItem = document.createElement("li");
+// newTodoItem.textContent = "Teach students";
+// const todoList = document.querySelector(".todo-list");
+// todoList.appendChild(newTodoItem);
+// todoList.remove();
+
+
+
+// static list vs live list  (static list is better as it consumes less memory than live list)
+//static list --> displays 6th list in browser but in reality it does not appends
+// const listItems = document.querySelectorAll(".todo-list");
+// const sixthItem = document.createElement("li");
+// sixthItem.textContent = "list 6";
+// const ul = document.querySelector(".todo-list");
+// ul.append(sixthItem);
+// console.log(listItems);
+
+//live list --> displays and appends 6th list in browser as well as reality
+// const ul = document.querySelector(".todo-list");
+// const listItems = ul.getElementsByTagName("li");
+// const sixthItem = document.createElement("li");
+// sixthItem.textContent = "list 6";
+// ul.append(sixthItem);
+// console.log(listItems);
+
+
+// How to get the dimensions of the element
+//height , width
+// const sectionTodo = document.querySelector(".section-todo");
+// const info = sectionTodo.getBoundingClientRect();
+// console.log(info);
