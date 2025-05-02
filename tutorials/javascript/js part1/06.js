@@ -16,7 +16,7 @@
 //     address: "kolkata",
 // }
 // for(let obj of objects){
-//     console.log(obj);
+//     console.log(obj);   //error
 // }
 
 //**** array like objects
@@ -32,9 +32,9 @@
 
 //***sets (it is iterable)
 //it stores data in any order
+//so can't be accessed by index
 //stores only unique items (no duplicates)
 //It has its own methods
-//can not be accessed by index
 
 //method 1
 // const numbers = new Set([2,3,5,1]);
@@ -50,8 +50,8 @@
 // numbers.add(items);  //set storing arrays
 // numbers.add([3,5,1]);
 // numbers.add([3,5,1]);  //here same array points different locations , so it can be added to set
-
 // console.log(numbers);
+
 // if(numbers.has(4)){
 //     console.log("present");
 // }else{

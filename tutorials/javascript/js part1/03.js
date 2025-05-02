@@ -101,7 +101,7 @@
 // };
 // console.log(arr1);
 // console.log(arr2);
-// const newArr = {...arr1, ...arr2};
+// // const newArr = {...arr1, ...arr2};
 // const newArr = {...arr1, ...arr2, key69 : "hello"}
 // console.log(newArr);
 

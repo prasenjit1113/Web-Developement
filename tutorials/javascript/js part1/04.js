@@ -20,7 +20,7 @@
 // const returnVal = sumTwoNum(5,7);
 // console.log(returnVal);
 
-//arrow function (shorten)
+//arrow function automatically returns
 // const sumTwoNum = (num1 , num2) => num1 + num2;
 // const returnVal = sumTwoNum(5,7);
 // console.log(returnVal);
@@ -146,7 +146,7 @@
 
 
 //parameter destructuring
-//used in objects ...and popular in react.
+//used in objects and popular in react.
 // const person = {
 //     fname : "prasenjit",
 //     gender : "male",
