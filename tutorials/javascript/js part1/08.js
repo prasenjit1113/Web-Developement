@@ -1,6 +1,5 @@
 // Object Oriented JavaScript / Prototypal Inheritance --> part2
 
-
 //******************** new keyword *********************
 // function createUser(firstName, age){
 //     this.firstName = firstName;
@@ -249,10 +248,10 @@
 // }
 // const person1 = new Person("Prasenjit","paul",23);
 
-// //by the underlined syntax --> console.log(person1.fullName), we get only the function , not the values.
-// //to get values with that syntax we have to write get keyword infront of the method fullName
 // console.log(person1.firstName);
 // console.log(person1.lastName);
+// //by the underlined syntax --> console.log(person1.fullName), we get only the function , not the values.
+// //to get values with that syntax we have to write get keyword infront of the method fullName
 // console.log(person1.fullName);
 
 // //we can set values by set keyword, which sets fullName method

@@ -238,7 +238,7 @@
 
 
 
-//Three ways to creating objects
+//Three ways of creating objects
 // way 1  //adding key value pairs inside object
 // const obj1 = {
 //     key1: "value1",
