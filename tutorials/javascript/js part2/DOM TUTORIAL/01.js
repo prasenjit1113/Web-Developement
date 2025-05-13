@@ -192,7 +192,7 @@
 // const newTodoItem = document.createElement("li");
 // newTodoItem.textContent = "Teach students";
 // const todoList = document.querySelector(".todo-list");
-// // todoList.before(newTodoItem);
+// todoList.before(newTodoItem);
 // todoList.after(newTodoItem);
 
 
@@ -204,7 +204,7 @@
 // newTodoItem.textContent = "Teach students";
 // const todoList = document.querySelector(".todo-list");
 // todoList.appendChild(newTodoItem);
-// todoList.remove();
+// // todoList.remove();
 
 
 

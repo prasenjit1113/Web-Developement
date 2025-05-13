@@ -143,4 +143,4 @@ myFunc();
 const myFunc2 = func();
 myFunc2();
 myFunc2();
-myFunc2();z
+myFunc2();

@@ -1,9 +1,10 @@
 // Deeply understand dom tree, root node , element nodes, text nodes
+
 // const rootNode = document.getRootNode();
 // console.log(rootNode);
 // console.log(rootNode.childNodes);  //print child of rootnode
-// const htmlElementNode = rootNode.childNodes[1];   //output--> NodeList(3) [head, text, body]
-// console.log(htmlElementNode.childNodes);  //print 1 indexed child of rootnode
+// const htmlElementNode = rootNode.childNodes[1];   //get 1 indexed child of rootnode
+// console.log(htmlElementNode.childNodes);  //output--> NodeList(3) [head, text, body]
 
 //print children of nextnodes
 //child relationship
@@ -24,8 +25,9 @@
 //but by using nextElementSibling, we directly get next sibling skipping the newline(text)
 // console.log(ele1.nextElementSibling);  //same as ele1.nextSibling.nextSibling
 
-//prints childnodes od ele1 including newlines(texts)
+//prints childnodes of ele1 including newlines(texts)
 // console.log(ele1.childNodes);
+
 
 
 
