@@ -1,12 +1,13 @@
 // Intro to Events
 
+//index.html linked here
+
 //to add events , we use method --> addEventListener(event name, function)
 // const btn = document.querySelector(".btn-headline");
 // // console.log(btn);
 // btn.addEventListener("click",()=>{
 //     console.log("you clicked me!!!!!");
 // });
-
 
 
 //***This keyword inside eventListener callback
@@ -41,6 +42,10 @@
 
 
 
+
+
+//clickEvent.html linked here
+
 // **Event object
 // const firstButton = document.querySelector(".one");
 // firstButton.addEventListener("click", function(event){
@@ -68,7 +73,7 @@
 
 
 // Practice with events
-//cxhange the bgcolor and color of button if clicked
+//change the bgcolor and color of button if clicked
 // const allbtn = document.querySelectorAll(".my-buttons button");
 // console.log(allbtn.length);
 // allbtn.forEach(button =>{
@@ -78,3 +83,48 @@
 //         e.target.style.color = "green"
 //     })
 // })
+
+
+//keypress event and mouseover event
+// keypress event --> any key pressed on webpage it is shown in console
+// const body = document.body;
+// body.addEventListener("keypress",(e)=>{
+//     console.log(e.key);
+// })
+//mouseover event --> when mouse hovered 
+// const myButton = document.querySelector(".my-buttons");
+// console.log(myButton);
+// myButton.addEventListener("mouseover",()=>{
+//     console.log("mouseover event occured")
+// })
+//mouseleave event --> when mouse not hovered
+// const myButton = document.querySelector(".my-buttons");
+// console.log(myButton);
+// myButton.addEventListener("mouseleave",()=>{
+//     console.log("mouseover event occured")
+// })
+
+
+
+
+//demo.html linked here
+//demo project --> random color generator by clicking on button and show in rgb format
+
+// const mainbtn = document.querySelector("button");
+// const body = document.body;
+// const currColor = document.querySelector(".current-color");
+// function randomColorGenerator(){
+//     const red = Math.floor(Math.random() * 256);
+//     const green = Math.floor(Math.random() * 256);
+//     const blue = Math.floor(Math.random() * 256);
+//     const randomColor = `rgb(${red}, ${green}, ${blue})`
+//     return randomColor;
+// }
+// mainbtn.addEventListener("click",()=>{
+//     const randomColor = randomColorGenerator();
+//     // console.log(randomColor);
+//     body.style.backgroundColor = randomColor;
+//     currColor.textContent = randomColor;
+// })
+
+
