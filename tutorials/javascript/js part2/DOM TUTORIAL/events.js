@@ -128,3 +128,102 @@
 // })
 
 
+
+// event_bubbling.html linked here
+// Event bubbling & Event Capturing & event delegation
+
+// Event bubbling / propagation
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+// child.addEventListener("click",()=>{
+//     console.log("bubbling on child")
+// })
+// parent.addEventListener("click",()=>{
+//     console.log("bubbling on parent")
+// })
+// grandparent.addEventListener("click",()=>{
+//     console.log("bubbling on grandparent")
+// })
+// document.body.addEventListener("click",()=>{
+//     console.log("bubbling on body")
+// })
+
+
+// Event Capturing
+// const grandparent = document.querySelector(".grandparent");
+// const parent = document.querySelector(".parent");
+// const child = document.querySelector(".child");
+// child.addEventListener("click",()=>{
+//     console.log("captured!!! child")
+// },true)
+// parent.addEventListener("click",()=>{
+//     console.log("captured!!! parent")
+// },true)
+// grandparent.addEventListener("click",()=>{
+//     console.log("captured!!! grandparent")
+// },true)
+// document.body.addEventListener("click",()=>{
+//     console.log("captured!!! body")
+// },true)
+
+// child.addEventListener("click",()=>{
+//     console.log("bubbling on child")
+// })
+// parent.addEventListener("click",()=>{
+//     console.log("bubbling on parent")
+// })
+// grandparent.addEventListener("click",()=>{
+//     console.log("bubbling on grandparent")
+// })
+// document.body.addEventListener("click",()=>{
+//     console.log("bubbling on body")
+// })
+
+
+//as child and parent belong to grandparent so, don't need to add event to all
+//just add into grandparent . It is called event delegation
+//event delegation
+// const grandparent = document.querySelector(".grandparent");
+// grandparent.addEventListener("click",(e)=>{
+//     console.log(e.target)
+// })
+
+
+
+// Project Using Event Delegation
+//link to index.html
+// const todoForm = document.querySelector(".form-todo");
+// const todoInput = document.querySelector(".form-todo input[type='text']")
+// const todoList = document.querySelector(".todo-list");
+// todoForm.addEventListener("submit",(e)=>{
+//     e.preventDefault();  //**** to prevent auto reload of page
+//     // console.log(todoInput.value); //show typed text in console
+
+//     const newTodoText = todoInput.value;
+//     const newLi = document.createElement("li");
+//     const newLiInnerHtml = `
+//           <span class="text">${newTodoText}</span>
+//           <div class="todo-buttons">
+//             <button class="todo-btn done">Done</button>
+//             <button class="todo-btn remove">Remove</button>
+//           </div>
+//         `;
+//     newLi.innerHTML = newLiInnerHtml;
+//     // console.log(newLi);
+//     todoList.append(newLi);
+//     todoInput.value = ""; //auto erase typed text
+// })
+
+// //use of Event Delegation
+// todoList.addEventListener("click", (e)=>{
+//     //check if user clicked on done button
+//     if(e.target.classList.contains("remove")){
+//         const targetedLi = e.target.parentNode.parentNode;
+//         targetedLi.remove();
+//     }
+//     if (e.target.classList.contains("done")) {
+//         const liSpan = e.target.parentNode.previousElementSibling;
+//         liSpan.style.textDecoration = "line-through";
+//     }
+// })
