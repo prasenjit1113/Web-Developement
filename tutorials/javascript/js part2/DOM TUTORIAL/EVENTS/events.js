@@ -1,9 +1,9 @@
 // Intro to Events
 
-//index.html linked here
+//clickEvent.html linked here
 
 //to add events , we use method --> addEventListener(event name, function)
-// const btn = document.querySelector(".btn-headline");
+// const btn = document.querySelector(".my-buttons button");
 // // console.log(btn);
 // btn.addEventListener("click",()=>{
 //     console.log("you clicked me!!!!!");
@@ -11,22 +11,21 @@
 
 
 //***This keyword inside eventListener callback
-// const btn = document.querySelector(".btn-headline");
+// const btn = document.querySelectorAll(".my-buttons button");
 
-//in case of normal function value of this will be the element on which the function is working
+// //in case of normal function value of this will be the element on which the function is working
 // btn.addEventListener("click",function(){
 //     console.log("you clicked me!!!!!");
 //     console.log("value of this is");
 //     console.log(this);
 // });
 
-//in case of arrow function value of this will be window object
+//but in case of arrow function value of this will be window object
 // btn.addEventListener("click",()=>{
 //     console.log("you clicked me!!!!!");
 //     console.log("value of this");
 //     console.log(this);
 // });
-
 
 
 // Add events on multiple elements
@@ -39,12 +38,6 @@
 //         console.log("you clicked me!!!!!");
 //     });
 // }
-
-
-
-
-
-//clickEvent.html linked here
 
 // **Event object
 // const firstButton = document.querySelector(".one");
@@ -86,7 +79,7 @@
 
 
 //keypress event and mouseover event
-// keypress event --> any key pressed on webpage it is shown in console
+// keypress event --> any key pressed on webpage, it will be shown in console
 // const body = document.body;
 // body.addEventListener("keypress",(e)=>{
 //     console.log(e.key);
@@ -122,7 +115,7 @@
 // }
 // mainbtn.addEventListener("click",()=>{
 //     const randomColor = randomColorGenerator();
-//     // console.log(randomColor);
+//     console.log(randomColor);
 //     body.style.backgroundColor = randomColor;
 //     currColor.textContent = randomColor;
 // })
@@ -132,7 +125,7 @@
 // event_bubbling.html linked here
 // Event bubbling & Event Capturing & event delegation
 
-// Event bubbling / propagation
+// Event bubbling / propagation  --> goes from inner to outer
 // const grandparent = document.querySelector(".grandparent");
 // const parent = document.querySelector(".parent");
 // const child = document.querySelector(".child");
@@ -150,10 +143,24 @@
 // })
 
 
-// Event Capturing
+// Event Capturing  --> goes from outer into inner
+// Event Capturing gets priority over event bubbling, that's why it(Event Capturing) always prited first
 // const grandparent = document.querySelector(".grandparent");
 // const parent = document.querySelector(".parent");
 // const child = document.querySelector(".child");
+// child.addEventListener("click",()=>{
+//     console.log("bubbling on child")
+// })
+// parent.addEventListener("click",()=>{
+//     console.log("bubbling on parent")
+// })
+// grandparent.addEventListener("click",()=>{
+//     console.log("bubbling on grandparent")
+// })
+// document.body.addEventListener("click",()=>{
+//     console.log("bubbling on body")
+// })
+
 // child.addEventListener("click",()=>{
 //     console.log("captured!!! child")
 // },true)
@@ -167,23 +174,10 @@
 //     console.log("captured!!! body")
 // },true)
 
-// child.addEventListener("click",()=>{
-//     console.log("bubbling on child")
-// })
-// parent.addEventListener("click",()=>{
-//     console.log("bubbling on parent")
-// })
-// grandparent.addEventListener("click",()=>{
-//     console.log("bubbling on grandparent")
-// })
-// document.body.addEventListener("click",()=>{
-//     console.log("bubbling on body")
-// })
-
 
 //as child and parent belong to grandparent so, don't need to add event to all
 //just add into grandparent . It is called event delegation
-//event delegation
+// event delegation
 // const grandparent = document.querySelector(".grandparent");
 // grandparent.addEventListener("click",(e)=>{
 //     console.log(e.target)
@@ -191,39 +185,42 @@
 
 
 
-// Project Using Event Delegation
-//link to index.html
-// const todoForm = document.querySelector(".form-todo");
-// const todoInput = document.querySelector(".form-todo input[type='text']")
-// const todoList = document.querySelector(".todo-list");
-// todoForm.addEventListener("submit",(e)=>{
-//     e.preventDefault();  //**** to prevent auto reload of page
-//     // console.log(todoInput.value); //show typed text in console
 
-//     const newTodoText = todoInput.value;
-//     const newLi = document.createElement("li");
-//     const newLiInnerHtml = `
-//           <span class="text">${newTodoText}</span>
-//           <div class="todo-buttons">
-//             <button class="todo-btn done">Done</button>
-//             <button class="todo-btn remove">Remove</button>
-//           </div>
-//         `;
-//     newLi.innerHTML = newLiInnerHtml;
-//     // console.log(newLi);
-//     todoList.append(newLi);
-//     todoInput.value = ""; //auto erase typed text
-// })
+// small todo list Project Using Event Delegation
+
+//link to index.html
+
+const todoForm = document.querySelector(".form-todo");
+const todoInput = document.querySelector(".form-todo input[type='text']")
+const todoList = document.querySelector(".todo-list");
+todoForm.addEventListener("submit",(e)=>{
+    e.preventDefault();  //**** to prevent auto reload of page
+    // console.log(todoInput.value); //show typed text in console
+
+    const newTodoText = todoInput.value;
+    const newLi = document.createElement("li");
+    const newLiInnerHtml = `
+          <span class="text">${newTodoText}</span>
+          <div class="todo-buttons">
+            <button class="todo-btn done">Done</button>
+            <button class="todo-btn remove">Remove</button>
+          </div>
+        `;
+    newLi.innerHTML = newLiInnerHtml;
+    // console.log(newLi);
+    todoList.append(newLi);
+    todoInput.value = ""; //auto erase typed text
+});
 
 // //use of Event Delegation
-// todoList.addEventListener("click", (e)=>{
-//     //check if user clicked on done button
-//     if(e.target.classList.contains("remove")){
-//         const targetedLi = e.target.parentNode.parentNode;
-//         targetedLi.remove();
-//     }
-//     if (e.target.classList.contains("done")) {
-//         const liSpan = e.target.parentNode.previousElementSibling;
-//         liSpan.style.textDecoration = "line-through";
-//     }
-// })
+todoList.addEventListener("click", (e)=>{
+    //check if user clicked on done button
+    if(e.target.classList.contains("remove")){
+        const targetedLi = e.target.parentNode.parentNode;
+        targetedLi.remove();
+    }
+    if (e.target.classList.contains("done")) {
+        const liSpan = e.target.parentNode.previousElementSibling;
+        liSpan.style.textDecoration = "line-through";
+    }
+})
