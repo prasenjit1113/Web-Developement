@@ -41,5 +41,26 @@
 // console.log("script end");
 
 
-//setInterval()
+//setInterval() --> after every interval , it automatically executes
+// console.log("script start");
+// setInterval(() => {
+//     console.log("inside loop");
+// }, 1000); 
+// console.log("script end");
 
+//small project using setInterval() and clearTimeout()
+// const body = document.body;
+// const intervalId = setInterval(()=> {
+//     const red = Math.floor(Math.random() * 126);
+//     const green = Math.floor(Math.random() * 126);
+//     const blue = Math.floor(Math.random() * 126);
+//     const rgb = `rgb(${red},${green},${blue})`;
+//     // console.log(rgb);
+//     body.style.background = rgb;
+// },1000);
+
+// const btn = document.querySelector("button");
+// btn.addEventListener("click",()=>{
+//     clearTimeout(intervalId);
+//     btn.textContent = body.style.background;
+// });
