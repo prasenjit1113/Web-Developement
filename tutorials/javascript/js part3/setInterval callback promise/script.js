@@ -48,6 +48,8 @@
 // }, 1000); 
 // console.log("script end");
 
+//index.html linked here
+
 //small project using setInterval() and clearTimeout()
 // const body = document.body;
 // const intervalId = setInterval(()=> {
@@ -104,6 +106,16 @@
 //index2.html linked here
 
 //task --> change the textcontent and color after the delay
+// Text       Delay   Color
+
+// one        1s      Violet
+// two        2s      purple
+// three      2s      red
+// four       1s      Pink
+// five       2s      green
+// six        3s      blue
+// seven      1s      brown
+
 // const heading1 = document.querySelector(".heading1");
 // const heading2 = document.querySelector(".heading2");
 // const heading3 = document.querySelector(".heading3");
@@ -114,16 +126,6 @@
 // const heading8 = document.querySelector(".heading8");
 // const heading9 = document.querySelector(".heading9");
 // const heading10 = document.querySelector(".heading10");
-
-// Text       Delay   Color
-
-// one        1s      Violet
-// two        2s      purple
-// three      2s      red
-// four       1s      Pink
-// five       2s      green
-// six        3s      blue
-// seven      1s      brown
 
 // callback hell  
 // It is problematic as there are multiple callback functions. 
@@ -212,7 +214,7 @@ const friedricePromise = new Promise((resolve,reject)=>{
 
 
 //consume
-//it is the working of event and its is stored into microtask queue
+//it is the working of promise and it is stored into microtask queue
 //friedricePromise.then is like try and friedricePromise.catch is like catch
 friedricePromise.then(
     //when promise is resolved
@@ -241,7 +243,7 @@ console.log("script end");
 
 // function returning a promise
 // function returnPromise(){
-//     const bucket = ['coffee','chips', 'vegetables', 'salt', 'rice'];
+//     const bucket = ['coffee','chips', '', 'salt', 'rice'];
 //     return new Promise((resolve,reject)=>{
 //         if(bucket.includes("vegetables") && bucket.includes("salt") && bucket.includes("rice")){
 //             resolve({value:"friedrice"});
@@ -314,6 +316,7 @@ console.log("script end");
 
 // Callback hell to flat code
 //previous callback example into using promise
+/*
 const heading1 = document.querySelector(".heading1");
 const heading2 = document.querySelector(".heading2");
 const heading3 = document.querySelector(".heading3");
@@ -354,3 +357,4 @@ changeText(heading1,"one","green",1000)
     .catch((error)=>{
         alert(error);
     })
+*/
