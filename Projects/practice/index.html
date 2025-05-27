@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let counter = 0;
+        const body = document.body;
+
+        //generate random color
+        function randomColorGenerator(){
+            const red = Math.floor(Math.random() *256);
+            const green = Math.floor(Math.random() *256);
+            const blue = Math.floor(Math.random() *256);
+            const colors = `rgb(${red},${green},${blue})`;
+            return colors;
+        }
+
+        const value = document.querySelector("h1");
+
+        const btn1 = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+        const btn3 = document.querySelector(".btn3");
+
+        const button = document.querySelector("button");
+
+        btn1.addEventListener("click",()=>{
+            counter++;
+            value.textContent = counter;
+
+            const randomColor = randomColorGenerator();
+            body.style.backgroundColor = randomColor;  //applying random color
+        })
+        btn2.addEventListener("click",()=>{
+            counter--;
+            value.textContent = counter;
+
+            const randomColor = randomColorGenerator();
+            body.style.backgroundColor = randomColor;  //applying random color
+        })
+        btn3.addEventListener("click",()=>{
+            counter=0;
+            value.textContent = counter;
+            
+            body.style.backgroundColor = "white";
+        })
+
+    </script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            text-align: center;
+        }
+        h1{
+            font-size: 10rem;
+            margin: 20px;
+        }
+        button{
+            font-size: 2rem;
+            margin: 20px 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .container-row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="container-row">
+            <button class="btn1">+</button>
+            <h1>0</h1>
+            <button class="btn2">-</button>
+        </div>
+        <div>
+            <button class="btn3">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
