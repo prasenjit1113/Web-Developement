@@ -196,8 +196,12 @@ const todoList = document.querySelector(".todo-list");
 todoForm.addEventListener("submit",(e)=>{
     e.preventDefault();  //**** to prevent auto reload of page
     // console.log(todoInput.value); //show typed text in console
-
     const newTodoText = todoInput.value;
+    if(!newTodoText){
+        alert("task not added");
+        return;
+    }
+
     const newLi = document.createElement("li");
     const newLiInnerHtml = `
           <span class="text">${newTodoText}</span>
@@ -216,11 +220,13 @@ todoForm.addEventListener("submit",(e)=>{
 todoList.addEventListener("click", (e)=>{
     //check if user clicked on done button
     if(e.target.classList.contains("remove")){
-        const targetedLi = e.target.parentNode.parentNode;
+        // const targetedLi = e.target.parentNode.parentNode;
+        const targetedLi = e.target.closest("li").remove();
         targetedLi.remove();
     }
     if (e.target.classList.contains("done")) {
-        const liSpan = e.target.parentNode.previousElementSibling;
+        // const liSpan = e.target.parentNode.previousElementSibling;
+        const liSpan = e.target.closest("li").querySelector("span");
         liSpan.style.textDecoration = "line-through";
     }
 })

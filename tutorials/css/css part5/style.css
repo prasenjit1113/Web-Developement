@@ -28,6 +28,7 @@
     border: 1px solid red;
     /* width: 300px; */
     flex-basis: 600px;
+    padding: 10px;
 
     /* flex-grow: 1; */
 }
