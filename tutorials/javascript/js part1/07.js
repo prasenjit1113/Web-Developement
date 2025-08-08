@@ -96,11 +96,11 @@
 
 //using call method, passing parameters individual
 // about.call(user1,"kolkata",9626473);
-// about.call(user2,"puen",96473);
+// about.call(user2,"pune",96473);
 
 //using apply method, passing parameters as array
 // about.apply(user1,["kolkata",9626473]);
-// about.apply(user2,["kolkata",9626473]);
+// about.apply(user2,["kerala",3426422]);
 
 //bind method returns value into a function and then the function is called
 // const func1 = about.bind(user1, "kolkata", 76234);
@@ -358,7 +358,7 @@ function hello(){
 // console.log(hello.myProperty);
 // console.log(hello)
 
-//while craeting an function we get some free space which is object {}
+//while craeting a function we get some free space which is object {}
 // ***** prototype is an object which is automatically created when function is created
 // console.log(hello.prototype);   //{}
 

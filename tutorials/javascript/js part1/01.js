@@ -2,8 +2,7 @@
 
 //introduction to variables
 //variables can store some information
-//we can use that information later
-//we can also change that information later
+//we can use that information also can change that information later
 
 "use strict";
 //declare a variable
