@@ -27,7 +27,14 @@ todoForm.addEventListener("submit", (e) => {
 todoList.addEventListener("click", (e) => {
   if (e.target.classList.contains("done")) {
     const span = e.target.closest("li").querySelector("span");
-    span.style.textDecoration = "line-through";
+    
+    if(span.style.textDecoration == "line-through"){
+      span.style.textDecoration = "none";
+      e.target.textContent = "Done";
+    }else{
+      span.style.textDecoration = "line-through";
+      e.target.textContent = "Undone";
+    }
   }
 
   if (e.target.classList.contains("remove")) {

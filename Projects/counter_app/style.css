@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body{
 }
 .heading{
     font-size: 3rem;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 .value{
     font-size: 5rem;
@@ -25,6 +25,11 @@ button{
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
+}
+button:hover{
+    color: rgb(108, 150, 150);
+    background-color: rgb(220, 155, 155);
+    transition-delay: .1s;
 }
 .container-row{
     display: flex;
