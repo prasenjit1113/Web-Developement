@@ -1,0 +1,117 @@
+/* Reset & Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #222;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #3b82f6;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.header .title {
+    font-size: 22px;
+}
+
+.search_value {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    width: 200px;
+}
+
+/* Main Form Section */
+.main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+.main label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.name_input,
+.ingredient_input,
+.steps_input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.btn {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background-color: #3b82f6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+}
+
+/* Footer Section */
+.footer {
+    margin: 20px;
+}
+
+.items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Recipe Card */
+.list-items {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 250px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.list-items .list-recipe {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #2563eb;
+}
+
+.list-items .list-ingredient,
+.list-items .list-step {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
