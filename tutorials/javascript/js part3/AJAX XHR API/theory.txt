@@ -1,9 +1,9 @@
 // BASIC THEORY 
 
-// HTTP request --> a request from client(browser) to backend (database)
+// HTTP request --> a request from client(browser) to backend(database)
+(http provides communication medium between client and server)
 
 // AJAX : asynchronous javascript and XML
-
 // is a set of "web development techniques" 
 // using many web technologies on the "client-side"
 // to create asynchronous web applications. 

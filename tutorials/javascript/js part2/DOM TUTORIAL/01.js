@@ -1,5 +1,5 @@
 //DOM (Document Object Model)
-// overview  -->    how to use    -->     deep study
+// overview    -->    how to use    -->     deep study
 
 //everything in html file is stored in document object
 // console.dir(document);
@@ -19,13 +19,13 @@
 
 
 //** // textcontent v/s innertext 
-//textcontent property (shows all text with hidden text and can change text)
+//textcontent property (shows all text including hidden text and can change the text)
 // const mainHeading = document.querySelector("#main-heading");
 // console.log(mainHeading.textContent);
 // mainHeading.textContent = "come on";
 // console.log(mainHeading.textContent);
 
-//innerText property (shows only text not the hidden text and can change text)
+//innerText property (shows only text excluding the hidden text and can change text)
 // const mainHeading = document.querySelector("#main-heading");
 // console.log(mainHeading.innerText)
 // mainHeading.innerText = "come on";
@@ -38,7 +38,7 @@
 // mainHeading.style.backgroundColor = "red";
 // mainHeading.style.border = "5px solid green";
 
-//get and set attributes
+//getattribute and setattribute
 // const link = document.querySelector("a");
 // console.log(link.getAttribute("href").slice(1));
 // link.style.color = "red";
@@ -62,7 +62,7 @@
 // 3 loops --> simple for loop, for of loop, forEach loop
 
 //loops for HTMLCollection
-//simple for loop  for HTMLCollection
+//simple for loop for HTMLCollection
 // const navItems = document.getElementsByTagName("a");  
 // for(let i=0; i<navItems.length; i++){
     // console.log(navItems[i]);

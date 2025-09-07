@@ -10,7 +10,7 @@
 
 // Asynchronous programming
 //setTimeout() --> is a function that takes 2 arguments. one-> as a function, second-> the delay value we want
-// js doesn't executes setTimeout(), browser does. js tells browser after how much time setTimeout() to be executed
+// js doesn't execute setTimeout(), browser does. js tells browser after how much time setTimeout() to be executed
 // console.log("script start");
 // setTimeout(() => {
 //     console.log("inside loop");
@@ -47,6 +47,8 @@
 //     console.log("inside loop");
 // }, 1000); 
 // console.log("script end");
+
+
 
 //index.html linked here
 
@@ -194,13 +196,16 @@
 
 
 // ***************** promise ******************
+// (promise means a value we don't know now but in future we will come to know, think example of fried rice)
 /*
+
 console.log("script start");
 
 const bucket = ['coffee','chips', 'vegetables', 'salt', 'rice'];
 
 //promise creation
-//here resolve and reject are callback functions
+// Promise is declred using new keyword and takes a function (resolve,reject) which are itself individual functions
+//here resolve and reject are callback functions which are called executer function as these are executing promise
 const friedricePromise = new Promise((resolve,reject)=>{
     if(bucket.includes("vegetables") && bucket.includes("salt") && bucket.includes("rice")){
         resolve({value:"friedrice"});
@@ -290,7 +295,7 @@ console.log("script end");
 //     console.log(value);
 // })
 
-//promise chaining
+//promise chaining  
 // function myPromise(){
 //     return new Promise((resolve,reject)=>{
 //         resolve("foo");

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(133, 244, 244);
+}
+.main{
+    margin-top: 200px;
+    font-size: 20px;
+}
+h2{
+    margin-bottom: 20px;
+}
+input,button{
+    padding: 3px;
+    font-size: 20px;
+}
